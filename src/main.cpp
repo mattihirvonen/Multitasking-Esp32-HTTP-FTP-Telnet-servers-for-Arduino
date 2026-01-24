@@ -19,12 +19,12 @@
 
 
 #include <WiFi.h>
-#include "./servers/std/console.hpp"
+#include "../servers/std/console.hpp"
 
 // --- PLEASE MODIFY THIS FILE FIRST! --- This is where you can configure your network credentials, which servers will be included, etc ...
 #include "Esp32_servers_config.h"
 
-#include "./servers/std/Cstring.hpp"
+#include "../servers/std/Cstring.hpp"
 
 #ifdef USE_OTA
     #include <ESPmDNS.h>
