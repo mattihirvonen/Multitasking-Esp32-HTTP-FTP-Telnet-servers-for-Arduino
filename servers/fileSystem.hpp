@@ -304,7 +304,7 @@
                     return SD.totalBytes (); // if SD is not mounted totalBytes returns 0 
                 #elif FILE_SYSTEM == (FILE_SYSTEM_FAT | FILE_SYSTEM_SD_CARD)
                     return FFat.totalBytes (); // if FFat is not mounted totalBytes returns 0 
-                #elif
+                #else
                     #pragma error "FILE_SYSTEM is not correctly #defined" 
                 #endif
             }
