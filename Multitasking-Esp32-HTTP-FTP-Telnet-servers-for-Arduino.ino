@@ -423,9 +423,12 @@ void cronHandlerCallback (const char *cronCommand) {
 
 
 void setup () {
-    cinit (); // Serial.begin (115200);
-    cout << "[server] " MACHINETYPE "(" << (int) ESP.getCpuFreqMHz () << " MHz) " HOSTNAME " SDK: " << ESP.getSdkVersion () << " " VERSION_OF_SERVERS " compiled at: " __DATE__ " " __TIME__ << endl; 
+    cinit ();        // Serial.begin (115200);
+    delay( 1000 );   // Give time to initialize serial port and switch IDE from upload to monitor
 
+    cout << "[server] " MACHINETYPE "(" << (int) ESP.getCpuFreqMHz () << " MHz) " HOSTNAME " SDK: " << ESP.getSdkVersion () << " " VERSION_OF_SERVERS " compiled at: " __DATE__ " " __TIME__ << endl; 
+    cout << "[server] G++ " << __GNUC__ << "." << __GNUC_MINOR__ << "." << __GNUC_PATCHLEVEL__ << "\n";
+    cout << "[server] Compiled with C++ standard: " << __cplusplus << "\n";
 
     #ifdef FILE_SYSTEM
         // 1. Mount file system - this is the first thing to do since all the configuration files reside on the file system
