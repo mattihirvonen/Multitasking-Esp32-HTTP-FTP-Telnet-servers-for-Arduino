@@ -1,0 +1,6 @@
+.pio
+.idea
+.vscode
+wificonf.h
+esp32multitasking-cppcheck-build-dir
+*.layout
