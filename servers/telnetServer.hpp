@@ -78,7 +78,7 @@
 #include "tcpServer.hpp"
 #include "tcpConnection.hpp"    
 #include "std/Cstring.hpp"
-#include "ESP32_ping.hpp"
+#include "esp32_ping.hpp"
 
 
 #ifndef __TELNET_SERVER__

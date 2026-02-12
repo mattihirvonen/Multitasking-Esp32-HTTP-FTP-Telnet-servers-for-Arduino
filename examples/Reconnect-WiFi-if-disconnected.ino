@@ -2,7 +2,7 @@
 #define DEFAULT_STA_PASSWORD            "YOUR_STA_PASSWORD"
 
 #include <esp_wifi.h>
-#include "./servers/ESP32_ping.hpp"
+#include "./servers/esp32_ping.hpp"
 
 
 void setup () {
