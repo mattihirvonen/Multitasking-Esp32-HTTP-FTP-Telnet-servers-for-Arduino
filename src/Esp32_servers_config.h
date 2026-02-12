@@ -107,23 +107,23 @@
 
 
 // 5. #include (or comment-out) the functionalities you want (or don't want) to use
-    #include "./servers/dmesg.hpp"                      // include dmesg_functions.h which is useful for run-time debugging - for dmesg telnet command
-    #include "./servers/fileSystem.hpp"                 // most functionalities can run even without a file system if everything is stored in RAM (smaller web pages, ...)   
-    #include "./servers/time_functions.h"               // fileSystem.hpp is needed prior to #including time_functions.h if you want to store the default parameters
-    #include "./servers/netwk.h"                        // fileSystem.hpp is needed prior to #including network.h if you want to store the default parameters
-    #include "./servers/httpClient.h"                   // support to access web pages from other servers and curl telnet command
-    #include "./servers/smtpClient.h"                   // fileSystem.hpp is needed prior to #including smtpClient.h if you want to store the default parameters
-    #include "./servers/userManagement.hpp"             // fileSystem.hpp is needed prior to #including userManagement.hpp in case of UNIX_LIKE_USER_MANAGEMENT
-    #include "./servers/esp32_ping.hpp"                 // include esp32_ping.hpp to occasioanly ping the router to check if ESP32 is still connected to WiFi
-    #include "./servers/version_of_servers.h"           // include version_of_servers.h to include version information
-    #include "./servers/telnetServer.hpp"               // needs almost all the above files for whole functionality, but can also work without them
-    #include "./servers/ftpServer.hpp"                  // fileSystem.hpp is also necessary to use ftpServer.h
+    #include "../servers/dmesg.hpp"                      // include dmesg_functions.h which is useful for run-time debugging - for dmesg telnet command
+    #include "../servers/fileSystem.hpp"                 // most functionalities can run even without a file system if everything is stored in RAM (smaller web pages, ...)   
+    #include "../servers/time_functions.h"               // fileSystem.hpp is needed prior to #including time_functions.h if you want to store the default parameters
+    #include "../servers/netwk.h"                        // fileSystem.hpp is needed prior to #including network.h if you want to store the default parameters
+    #include "../servers/httpClient.h"                   // support to access web pages from other servers and curl telnet command
+    #include "../servers/smtpClient.h"                   // fileSystem.hpp is needed prior to #including smtpClient.h if you want to store the default parameters
+    #include "../servers/userManagement.hpp"             // fileSystem.hpp is needed prior to #including userManagement.hpp in case of UNIX_LIKE_USER_MANAGEMENT
+    #include "../servers/esp32_ping.hpp"                 // include esp32_ping.hpp to occasioanly ping the router to check if ESP32 is still connected to WiFi
+    #include "../servers/version_of_servers.h"           // include version_of_servers.h to include version information
+    #include "../servers/telnetServer.hpp"               // needs almost all the above files for whole functionality, but can also work without them
+    #include "../servers/ftpServer.hpp"                  // fileSystem.hpp is also necessary to use ftpServer.h
     #ifdef FILE_SYSTEM
         #define USE_WEB_SESSIONS // comment this line out to save some memory if you won't use web sessions
     #endif
     #ifdef FILE_SYSTEM
         #define USE_I2S_INTERFACE             // I2S interface improves web based oscilloscope analog sampling (of a single signal) if ESP32 board has one
         // check INVERT_ADC1_GET_RAW and INVERT_I2S_READ #definitions in oscilloscope.h if the signals are inverted
-        #include "./servers/oscilloscope.h"   // web based oscilloscope: you must #include httpServer.hpp as well to use it
+        #include "../servers/oscilloscope.h"   // web based oscilloscope: you must #include httpServer.hpp as well to use it
     #endif
-    #include "./servers/httpServer.hpp"       // fileSystem.hpp is needed prior to #including httpServer.h if you want server also to serve .html and other files from built-in flash disk
+    #include "../servers/httpServer.hpp"       // fileSystem.hpp is needed prior to #including httpServer.h if you want server also to serve .html and other files from built-in flash disk
