@@ -2,15 +2,22 @@
 Arduino IDE/CLI and Pioarduino builds
 =====================================
 
+Project is modified to be "dual mode" application. This project can build
+without source code modifications using:
+- Arduino IDE
+- Arduino CLI
+- Visual Studio Code blugin "pioarduino" (which is fork ofrom PlatformIO blugin)
+
+Pioarduino is quite new fork of VScode's PlatformIO blugin.
+PlatformIO blugin support officially only old out of date API 2.x libraries (of ESP processors).
+Pioarduino blugin support up to date Arduino libraries.
+- https://github.com/pioarduino/platform-espressif32
+- https://github.com/sivar2311/platform-espressif32-versions/blob/main/README.md
+
 Following Arduino CLI build information is used as reference to modify project
 compatible build with Arduino IDE/CLI and Visual Studio Code blugin "pioarduino".
-Pioarduino is quite new fork of VScode's PlatformIO blugin.
 
-PlatformIO blugin support officially only old out of date API 2.x libraries.
-Pioarduino blugin support up to date Arduino libraries.
-
-
-
+'''
 Used library Version Path
 WiFi         3.3.5   C:\Users\mattihirvonen\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.3.5\libraries\WiFi
 Networking   3.3.5   C:\Users\mattihirvonen\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.3.5\libraries\Network
@@ -20,3 +27,4 @@ ESPmDNS      3.3.5   C:\Users\mattihirvonen\AppData\Local\Arduino15\packages\esp
 
 Used platform Version Path
 esp32:esp32  3.3.5   C:\Users\mattihirvonen\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.3.5
+'''
