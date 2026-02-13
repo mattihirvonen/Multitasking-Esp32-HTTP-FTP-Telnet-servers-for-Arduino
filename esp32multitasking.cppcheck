@@ -1,23 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="1">
-    <builddir>esp32multitasking-cppcheck-build-dir</builddir>
+    <builddir>cppcheck-build-dir</builddir>
     <platform>Unspecified</platform>
     <analyze-all-vs-configs>false</analyze-all-vs-configs>
     <check-headers>true</check-headers>
     <check-unused-templates>true</check-unused-templates>
+    <inline-suppression>true</inline-suppression>
     <max-ctu-depth>2</max-ctu-depth>
     <max-template-recursion>100</max-template-recursion>
-    <includedir>
-        <dir name="servers/"/>
-    </includedir>
     <defines>
         <define name="CONFIG_IDF_TARGET_ESP32"/>
+        <define name="CPPCHECK_FAKE"/>
     </defines>
+    <includedir>
+<!--
+        <dir name="C:/work/hdrcopy/libhdr-user/"/>
+        <dir name="C:/work/hdrcopy/libhdr-arduino/"/>
+-->
+        <dir name="C:/work/hdrcopy/libhdr-win-arduino-user/"/>
+        <dir name="C:/work/hdrcopy/libhdr-win-arduino-std/"/>
+        <dir name="C:/work/hdrcopy/libhdr-win-arduino-core/"/>
+    </includedir>
     <paths>
         <dir name="src"/>
+        <dir name="servers"/>
     </paths>
     <suppressions>
         <suppression fileName="*">unusedFunction</suppression>
         <suppression fileName="*">unusedVariable</suppression>
+        <suppression fileName="*">missingIncludeSystem</suppression>
+        <suppression fileName="*">missingInclude</suppression>
+<!-- -->
+        <suppression fileName="*">syntaxError</suppression>
+<!-- -->
     </suppressions>
+    <check-level-normal/>
 </project>
